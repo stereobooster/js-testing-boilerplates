@@ -1,5 +1,13 @@
 # Express + Mocha & Co
 
+## Installation
+
+```
+npm i
+```
+
+Don't forget to install [`PhantomJS`](http://phantomjs.org/download.html) and [`Grunt`](http://gruntjs.com/blog/2013-02-18-grunt-0.4.0-released)
+
 **Note**: `Grunt` is optional you can do all with `mocha` only
 
 ## Usage
@@ -39,6 +47,11 @@ grunt watch
 
 ```
 mocha -R html-cov > coverage.html
+```
+or
+
+```
+grunt coverage
 ```
 
 ## Test Documentation

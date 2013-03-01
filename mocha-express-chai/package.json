@@ -19,7 +19,7 @@
         "jade": "*"
     },
     "devDependencies": {
-        "grunt": "*",
+        "grunt": "0.4.x",
         "grunt-mocha-test": "*",
         "grunt-exec": "*",
         "chai": "*",
