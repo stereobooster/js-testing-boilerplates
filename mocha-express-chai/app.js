@@ -1,25 +1,27 @@
-var express = require('express');
+var express = require("express");
+var path = require("path");
 
-var index = require('./app/controllers/index');
+var index = require("./app/controllers/index");
 
 var app = express();
  
 // Config
 app.configure(function() {
-  app.set('port', 8000);
-  app.set('views', __dirname + '/app/views');
-  app.set('view engine', 'jade');
+  app.set("port", 8000);
+  app.set("views", __dirname + "/app/views");
+  app.set("view engine", "jade");
+  app.use(express.static(path.join(__dirname, "public")));
 });
 
-app.configure('development', function() {
-  app.use(express.logger('dev'));
+app.configure("development", function() {
+  app.use(express.logger("dev"));
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
 });
 
-app.configure('test', function () {
+app.configure("test", function () {
 });
 
-app.configure('production', function() {
+app.configure("production", function() {
 });
 
 index.init(app);
@@ -27,7 +29,7 @@ index.init(app);
 module.exports = app;
  
 if (!module.parent) {
-  app.listen(app.get('port'), function(){
-    console.log('Server started on port ' + app.get('port'));
+  app.listen(app.get("port"), function(){
+    console.log("Server started on port " + app.get("port"));
   })
 }

@@ -27,6 +27,8 @@
         "zombie": "*",
         "phantom": "*",
         "chai-supertest": "*",
-        "blanket": ">= 1.0.3"
+        "blanket": ">= 1.0.3",
+        "sinon": "*",
+        "sinon-chai": "*"
     }
 }
